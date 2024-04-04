@@ -7,6 +7,7 @@ import { setListings } from "../redux/state";
 import Loader from "../components/Loader";
 import ListingCard from "../components/ListingCard";
 import Footer from "../components/Footer"
+import { baseUrl } from "../Urls";
 
 const CategoryPage = () => {
   const [loading, setLoading] = useState(true);

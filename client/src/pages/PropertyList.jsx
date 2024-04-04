@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { setPropertyList } from "../redux/state";
 import Loader from "../components/Loader";
 import Footer from "../components/Footer"
+import { baseUrl } from "../Urls";
 
 const PropertyList = () => {
   const [loading, setLoading] = useState(true)

@@ -3,6 +3,7 @@ import "../styles/Login.scss"
 import { setLogin } from "../redux/state";
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
+import { baseUrl } from "../Urls";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");

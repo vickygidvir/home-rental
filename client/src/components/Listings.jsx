@@ -5,6 +5,7 @@ import ListingCard from "./ListingCard";
 import Loader from "./Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { setListings } from "../redux/state";
+import { baseUrl } from "../Urls";
 
 const Listings = () => {
   const dispatch = useDispatch();

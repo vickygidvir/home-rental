@@ -10,6 +10,7 @@ import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer"
+import { baseUrl } from "../Urls";
 
 const ListingDetails = () => {
   const [loading, setLoading] = useState(true);
