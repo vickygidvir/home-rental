@@ -128,7 +128,7 @@ const CreateListing = () => {
       });
 
       /* Send a POST request to server */
-      const response = await fetch("${baseUrl}/properties/create", {
+      const response = await fetch(`${baseUrl}/properties/create`, {
         method: "POST",
         body: listingForm,
       });
