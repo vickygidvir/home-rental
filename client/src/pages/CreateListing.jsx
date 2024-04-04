@@ -128,7 +128,7 @@ const CreateListing = () => {
       });
 
       /* Send a POST request to server */
-      const response = await fetch("http://localhost:3001/properties/create", {
+      const response = await fetch("${baseUrl}/properties/create", {
         method: "POST",
         body: listingForm,
       });
@@ -154,9 +154,8 @@ const CreateListing = () => {
             <div className="category-list">
               {categories?.map((item, index) => (
                 <div
-                  className={`category ${
-                    category === item.label ? "selected" : ""
-                  }`}
+                  className={`category ${category === item.label ? "selected" : ""
+                    }`}
                   key={index}
                   onClick={() => setCategory(item.label)}
                 >
@@ -368,9 +367,8 @@ const CreateListing = () => {
             <div className="amenities">
               {facilities?.map((item, index) => (
                 <div
-                  className={`facility ${
-                    amenities.includes(item.name) ? "selected" : ""
-                  }`}
+                  className={`facility ${amenities.includes(item.name) ? "selected" : ""
+                    }`}
                   key={index}
                   onClick={() => handleSelectAmenities(item.name)}
                 >

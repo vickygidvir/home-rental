@@ -25,7 +25,7 @@ const RegisterPage = () => {
 
   useEffect(() => {
     setPasswordMatch(formData.password === formData.confirmPassword || formData.confirmPassword === "")
-  },[formData.password, formData.confirmPassword])
+  }, [formData.password, formData.confirmPassword])
 
   const navigate = useNavigate()
 
@@ -39,7 +39,7 @@ const RegisterPage = () => {
         register_form.append(key, formData[key])
       }
 
-      const response = await fetch("http://localhost:3001/auth/register", {
+      const response = await fetch("${baseUrl}/auth/register", {
         method: "POST",
         body: register_form
       })
