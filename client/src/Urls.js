@@ -1,1 +1,1 @@
-export const baseUrl = "https://home-rental-web.vercel.app"
+export const baseUrl = "https://home-rental-beta.vercel.app"
