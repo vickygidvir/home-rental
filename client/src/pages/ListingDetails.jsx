@@ -76,7 +76,7 @@ const ListingDetails = () => {
         totalPrice: listing.price * dayCount,
       }
 
-      const response = await fetch("${baseUrl}/bookings/create", {
+      const response = await fetch(`${baseUrl}/bookings/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
