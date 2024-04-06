@@ -40,6 +40,11 @@ mongoose.connect(MONGO_URL, {
     process.exit(1);
 });
 
+// Simple GET API to accept GET request in "/" path 
+app.get("/", (req, res) => {
+    res.status(200).send("Hey, Welcome to DreamNest");
+  });
+
 // Error handling middleware
 app.use((err, req, res, next) => {
     console.error(err.stack);
