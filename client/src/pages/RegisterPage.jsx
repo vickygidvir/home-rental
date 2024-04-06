@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
 import "../styles/Register.scss";
-import { baseUrl } from "../Urls";
+import { baseUrl } from '../Urls';
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ const RegisterPage = () => {
 
   useEffect(() => {
     setPasswordMatch(formData.password === formData.confirmPassword || formData.confirmPassword === "")
-  }, [formData.password, formData.confirmPassword])
+  })
 
   const navigate = useNavigate()
 
@@ -40,7 +40,7 @@ const RegisterPage = () => {
         register_form.append(key, formData[key])
       }
 
-      const response = await fetch(`${baseUrl}/auth/register`, {
+      const response = await fetch(`${baseUrl}auth/register`, {
         method: "POST",
         body: register_form
       })
